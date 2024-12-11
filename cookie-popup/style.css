@@ -1,0 +1,83 @@
+/*Estilos geenerales*/
+
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Fondo oscuro tras el popup */
+.fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo más oscuro */
+    z-index: 999;
+    display: none; /* Ocultar inicialmente */
+}
+
+/* Contenedor del popup */
+.container-cookie {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background: #000000; /* Fondo negro */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #f5f5f5;
+    text-align: left;
+}
+
+/* Icono de cierre (cruz) */
+.cross {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
+    background: url('close.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* Imagen de cookie */
+.cookie-img {
+    width: 65px;
+    height: 65px;
+    background-size: cover;
+}
+
+/* Texto informativo */
+.container-info p {
+    font-size: 16px; /* Letra más grande */
+    color: #d1d1d1;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+/* Botón */
+#cookies-btn {
+    background: #3a3a3a;
+    color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 16px; /* Letra más grande */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#cookies-btn:hover {
+    background: #575757;
+}
+
+/* Ocultar inicialmente el popup */
+.container-cookie {
+    display: none;
+}
