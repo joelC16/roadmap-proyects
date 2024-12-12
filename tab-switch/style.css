@@ -58,7 +58,6 @@
   display: block;
 }
 
-/* Animaciones */
 @keyframes fadeIn {
   from {
     opacity: 0;

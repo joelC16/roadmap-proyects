@@ -18,8 +18,6 @@ if (localStorage.getItem("acceptedCookies") === "true") {
 // Cross 
 const cross = document.querySelector(".cross");
 
-
-
 cross.addEventListener("click", ()=>{
     containerCookie.style.display = "none"
 })
