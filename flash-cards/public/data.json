@@ -1,0 +1,43 @@
+[
+    {
+      "pregunta": "¿Qué es una variable en programación?",
+      "respuesta": "Una variable es un espacio en la memoria que se utiliza para almacenar datos que pueden cambiar durante la ejecución del programa."
+    },
+    {
+      "pregunta": "¿Qué es un ciclo 'for'?",
+      "respuesta": "Un ciclo 'for' es una estructura de control que se utiliza para repetir un bloque de código un número específico de veces."
+    },
+    {
+      "pregunta": "¿Qué es un array?",
+      "respuesta": "Un array es una estructura de datos que almacena una colección de elementos, generalmente del mismo tipo, en una secuencia ordenada."
+    },
+    {
+      "pregunta": "¿Qué significa 'API'?",
+      "respuesta": "API significa Interfaz de Programación de Aplicaciones. Es un conjunto de herramientas y definiciones que permite la interacción entre diferentes aplicaciones."
+    },
+    {
+      "pregunta": "¿Qué es un 'callback' en JavaScript?",
+      "respuesta": "Un 'callback' es una función que se pasa como argumento a otra función y se ejecuta después de que esa función complete su tarea."
+    },
+    {
+      "pregunta": "¿Qué es una clase en programación orientada a objetos?",
+      "respuesta": "Una clase es un molde o plantilla para crear objetos, proporcionando propiedades y métodos comunes a todos los objetos de ese tipo."
+    },
+    {
+      "pregunta": "¿Qué es un 'commit' en Git?",
+      "respuesta": "Un 'commit' es una acción en Git que guarda los cambios realizados en el repositorio local, creando una nueva versión del código."
+    },
+    {
+      "pregunta": "¿Qué es un framework?",
+      "respuesta": "Un framework es una estructura predefinida que facilita el desarrollo de aplicaciones, proporcionando herramientas y convenciones para organizar el código."
+    },
+    {
+      "pregunta": "¿Qué es un error '404'?",
+      "respuesta": "Un error '404' ocurre cuando el servidor no puede encontrar el recurso solicitado en una página web."
+    },
+    {
+      "pregunta": "¿Qué es un lenguaje de programación compilado?",
+      "respuesta": "Un lenguaje de programación compilado es aquel que se traduce completamente a código máquina antes de ser ejecutado, como C o C++."
+    }
+  ]
+  
