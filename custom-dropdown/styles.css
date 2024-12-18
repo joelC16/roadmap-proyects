@@ -62,7 +62,7 @@ body {
 }
 
 .dropdown-icon.fa-chevron-up {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
 }
 
 /* Menú desplegable */

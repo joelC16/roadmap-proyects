@@ -1,0 +1,127 @@
+/* TaskTracker.module.css */
+
+/* Fondo oscuro y color de texto claro para toda la página */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #111111; /* Fondo oscuro como el de Next.js */
+    color: #e0e0e0; /* Texto claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Título centrado, con un color claro */
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 30px;
+    font-size: 2.5rem;
+    font-weight: 600;
+}
+
+/* Formulario con fondo oscuro y estilo simple */
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #222222; /* Fondo oscuro del formulario */
+    border-radius: 8px;
+}
+
+/* Estilo del input */
+input[type="text"] {
+    padding: 12px 16px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 300px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    background-color: #333333;
+    color: #fff;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00aaff; /* Color de borde azul claro al estar enfocado */
+}
+
+/* Estilo del botón con transición sutil */
+button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background-color: #00aaff; /* Color azul tipo Next.js */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Efecto hover del botón */
+button:hover {
+    background-color: #0099cc; /* Azul más oscuro al pasar el ratón */
+    transform: scale(1.05); /* Efecto de agrandado */
+}
+
+/* Estilo para la lista de tareas */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+    width: 80%;
+    margin: 20px auto;
+}
+
+/* Estilo de cada tarea */
+.task {
+    background-color: #1c1c1c; /* Fondo oscuro para cada tarea */
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #444444;
+    transition: background-color 0.3s ease;
+}
+
+/* Tarea completada con texto tachado y gris */
+.task.complete {
+    text-decoration: line-through;
+    color: #888888; /* Color gris claro para completada */
+}
+
+/* Efecto de hover en las tareas */
+.task:hover {
+    background-color: #333333; /* Fondo más oscuro en hover */
+    transform: scale(1.02); /* Ligera animación de agrandado */
+}
+
+/* Botones dentro de las tareas (Completar y Eliminar) */
+.toggle {
+    background-color: #4CAF50; /* Verde para completar */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete {
+    background-color: #f44336; /* Rojo para eliminar */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en los botones de las tareas */
+.toggle:hover {
+    background-color: #45a049; /* Verde más oscuro al pasar el ratón */
+}
+
+.delete:hover {
+    background-color: #e53935; /* Rojo más oscuro al pasar el ratón */
+}
