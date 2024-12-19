@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body general */
+body {
+    background-color: #111827; /* Fondo oscuro, similar a Next.js */
+    color: #e5e7eb; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif; /* Fuente moderna */
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+}
+
+
+
+/* Contenedor principal del dropdown */
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    user-select: none;
+    background-color: #1f2937; /* Fondo oscuro, similar al tema oscuro de Next.js */
+    border: 1px solid #4b5563; /* Bordes sutiles en tonos grises */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.dropdown:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado del dropdown */
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 16px;
+    width: 100%;
+    background-color: #374151; /* Fondo oscuro con un tono gris más suave */
+    color: #e5e7eb; /* Texto claro */
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-header:hover {
+    background-color: #4b5563; /* Fondo ligeramente más claro al pasar el mouse */
+}
+
+/* Icono del dropdown */
+.dropdown-icon {
+    font-size: 16px;
+    color: #9ca3af; /* Color gris suave */
+    transition: transform 0.3s ease;
+}
+
+.dropdown-icon.fa-chevron-up {
+    transform: rotate(360deg);
+}
+
+/* Menú desplegable */
+.dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-height: 250px;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    margin-top: 8px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+}
+
+/* Elementos del menú */
+.dropdown-item {
+    padding: 12px 16px;
+    text-align: left;
+    color: #e5e7eb; /* Texto claro */
+    background-color: #374151; /* Fondo oscuro */
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.dropdown-item:hover {
+    background-color: #4b5563; /* Fondo ligeramente más claro al pasar el mouse */
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Último elemento sin borde */
+.dropdown-item:last-child {
+    border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contenedor del repositorio */
+.container-repository {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: #1f2937; /* Fondo oscuro */
+    border: 1px solid #4b5563; /* Borde sutil */
+    border-radius: 12px; /* Bordes redondeados */
+    margin-top: 20px;
+    max-width: 600px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container-repository:hover {
+    transform: translateY(-4px); /* Efecto de elevación */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del enlace del repositorio */
+.container-response {
+    text-decoration: none;
+    color: #e5e7eb; /* Texto claro */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Título del repositorio */
+.container-response h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #ffffff; /* Texto blanco */
+}
+
+/* Descripción del repositorio */
+.container-response p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #9ca3af; /* Texto gris claro */
+    line-height: 1.5;
+}
+
+/* Contenedor de información adicional */
+.container-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: #374151; /* Fondo más oscuro */
+    padding: 12px;
+    border-radius: 8px;
+}
+
+/* Elementos individuales de información */
+.container-info > div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.875rem;
+    color: #e5e7eb; /* Texto claro */
+}
+
+/* Botón de repositorio aleatorio */
+.container-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-random {
+    background-color: #2563eb; /* Azul moderno */
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-random:hover {
+    background-color: #1d4ed8; /* Azul más oscuro */
+    transform: translateY(-2px);
+}
+
+.btn-random:active {
+    background-color: #1e40af; /* Azul más profundo */
+    transform: translateY(0);
+}
+
