@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body general */
+body {
+    background-color: #111827; /* Fondo oscuro, similar a Next.js */
+    color: #e5e7eb; /* Texto claro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif; /* Fuente moderna */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.container-inputs {
+    display: flex;
+    gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* input donde se pone la cantidad */
+.amount {
+    width: 60px;
+    font-family: 'Inter', sans-serif;
+    background: #1f2937; 
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    outline: none;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+}
+.amount:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Button convert */
+.btn-convert {
+    background-color: rgb(26, 31, 106);
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    width: 100px;
+    font-size: 16px;
+    color: white;
+}
+.btn-convert:hover {
+    background-color: rgb(41, 49, 159);
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/* Contenedor principal del dropdown */
+.dropdown, .dropdown-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    user-select: none;
+    background-color: #1f2937; 
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.dropdown:hover, .dropdown-2:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Encabezado del dropdown */
+.dropdown-header, .dropdown-header-2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 12px 16px;
+    width: 100%;
+    background-color: #374151; 
+    color: #e5e7eb; 
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-header:hover, .dropdown-header-2:hover {
+    background-color: #4b5563; 
+}
+
+/* Icono del dropdown */
+.dropdown-icon, .dropdown-icon-2 {
+    font-size: 16px;
+    color: #9ca3af; 
+    transition: transform 0.3s ease;
+}
+
+.dropdown-icon.fa-chevron-up, .dropdown-icon-2.fa-chevron-up{
+    transform: rotate(360deg);
+}
+
+/* Menú desplegable */
+.dropdown-menu, .dropdown-menu-2 {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    border-radius: 8px;
+    margin-top: 8px;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Elementos del menú */
+.dropdown-item, .dropdown-item-2 {
+    padding: 12px 16px;
+    text-align: left;
+    color: #e5e7eb;
+    background-color: #374151; 
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.dropdown-item:hover, .dropdown-item-2:hover {
+    background-color: #4b5563; 
+    color: #ffffff;
+}
+
+/* Último elemento sin borde */
+.dropdown-item:last-child, .dropdown-item:last-child {
+    border-bottom: none;
+}

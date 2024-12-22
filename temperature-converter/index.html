@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature converter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/ec56df5e4e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <main class="container">
+        <h1>Temperature converter</h1>
+        <p class="messages">Enter the temperature, select units and submit</p>
+        <div class="container-inputs">
+            <input type="number" name="amount" id="amount" class="amount">
+            <div class="dropdown">
+                <div class="dropdown-header">
+                    <p class="dropdown-selected">From unit</p>
+                    <i class="dropdown-icon fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu">
+                    <div class="dropdown-item">Fahrenheit</div>
+                    <div class="dropdown-item">Celsius</div>
+                    <div class="dropdown-item">Kelvin</div>
+                </div>
+            </div>
+            <div class="dropdown-2">
+                <div class="dropdown-header-2">
+                    <p class="dropdown-selected-2">To unit</p>
+                    <i class="dropdown-icon-2 fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="dropdown-menu-2">
+                    <div class="dropdown-item-2">Fahrenheit</div>
+                    <div class="dropdown-item-2">Celsius</div>
+                    <div class="dropdown-item-2">Kelvin</div>
+                </div>
+            </div>
+            <button class="btn-convert" onclick="convertion()">Convert</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
