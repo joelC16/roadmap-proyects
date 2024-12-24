@@ -1,10 +1,8 @@
 "use client";
 
-export default function BtnLapses({selectedButtonLapses, setSelectedButtonLapses}) {
+export default function BtnLapses({selectedButtonLapses, setSelectedButtonLapses, changeColor}) {
 
-    function changeColor(button) {
-        setSelectedButtonLapses(button);
-    }
+
 
     return (
         <div className="container-btn-lapses">
