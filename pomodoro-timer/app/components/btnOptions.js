@@ -1,5 +1,4 @@
-"use client";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function BtnOptions({
   selectedButtonOptions,
@@ -7,12 +6,26 @@ export default function BtnOptions({
   setMinutesAndSeconds,
   selectedButtonLapses,
   setIsPopupVisible,
-  start, setStart,
+  start, 
+  setStart,
   setNotification,
 }) {
 
+  // Definir el sonido una vez cuando el componente se monta
+  const [sonido] = useState(new Audio('ringtones-minion-wake-up.mp3')); // Cambia la ruta del archivo de sonido
 
-  // espera a que selectedButtonLapses cambie para actualizar los minutos y los segundos
+  // Función para reproducir el sonido
+  function reproducirSonido() {
+    sonido.play();
+  }
+
+  // Función para detener el sonido
+  function detenerSonido() {
+    sonido.pause();
+    sonido.currentTime = 0;
+  }
+
+  // Espera a que selectedButtonLapses cambie para actualizar los minutos y los segundos
   useEffect(() => {
     if (selectedButtonLapses === "work") {
       setMinutesAndSeconds({ minutes: 25, seconds: "00" });
@@ -20,30 +33,32 @@ export default function BtnOptions({
       setMinutesAndSeconds({ minutes: 5, seconds: "00" });
     } else if (selectedButtonLapses === "long-break") {
       setMinutesAndSeconds({ minutes: 15, seconds: "00" });
-    } 
+    }
   }, [selectedButtonLapses]);
 
+  // Lógica de temporizador
   useEffect(() => {
     if (start) {
       const interval = setInterval(() => {
         setMinutesAndSeconds((prev) => {
           if (prev.seconds > 0) {
-            return { ...prev, seconds: prev.seconds - 1 }; // Disminuye los segundos
+            return { ...prev, seconds: prev.seconds - 1 };
           } else if (prev.minutes > 0) {
-            return { minutes: prev.minutes - 1, seconds: 59 }; // Disminuye minutos y reinicia segundos
+            return { minutes: prev.minutes - 1, seconds: 59 };
           } else {
-            clearInterval(interval); // Detén el temporizador cuando llegue a 0:00
-            setStart(!start);
-            setNotification(true)
-            console.log("tenes que hacer la parte del historial")
-            return prev; // Retorna el estado actual para evitar errores
+            clearInterval(interval); // Detener el temporizador
+            setStart(false); // Detener el temporizador
+            setNotification(true); // Notificación cuando termine el tiempo
+            reproducirSonido(); // Reproducir sonido
+            return prev; // Evitar errores
           }
         });
-      }, 980);
-      return () => clearInterval(interval); // Limpieza del intervalo
+      }, 1000); // Intervalo de 1 segundo
+      return () => clearInterval(interval); // Limpiar el intervalo
     }
-  }, [start]);
+  }, [start, setMinutesAndSeconds, setNotification]);
 
+  // Cambiar color de las opciones
   function changeColorOptions(button) {
     setSelectedButtonOptions(button);
   }
@@ -68,6 +83,7 @@ export default function BtnOptions({
         onClick={() => {
           changeColorOptions("stop");
           setStart(false);
+          detenerSonido();
         }}
       >
         Stop
@@ -85,7 +101,7 @@ export default function BtnOptions({
           } else if (selectedButtonLapses === "long-break") {
             setMinutesAndSeconds({ minutes: 15, seconds: "00" });
           }
-          setStart(false); // Pausa el temporizador después de restablecer
+          setStart(false); // Pausar el temporizador
         }}
       >
         Resume
@@ -96,7 +112,7 @@ export default function BtnOptions({
         }`}
         onClick={() => {
           changeColorOptions("custom");
-          setIsPopupVisible(true)
+          setIsPopupVisible(true);
         }}
       >
         Custom
